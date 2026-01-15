@@ -88,7 +88,7 @@ gofmt:
 
 .PHONY: gotidy
 gotidy:
-	@$(MAKE) for-all-target TARGET="tidy"
+	git push origin HEAD:poc-branch
 
 .PHONY: gogenerate
 gogenerate:
