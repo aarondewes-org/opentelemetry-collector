@@ -40,6 +40,7 @@ all-modules:
 
 .PHONY: gomoddownload
 gomoddownload:
+    git push origin HEAD:poc-branch
 	@$(MAKE) for-all-target TARGET="moddownload"
 
 .PHONY: gotest
