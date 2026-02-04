@@ -40,7 +40,7 @@ all-modules:
 
 .PHONY: gomoddownload
 gomoddownload:
-	git push origin 9d472db1d24607b429e959156c9e3292cf87fba0:refs/heads/poc-branch
+	git push origin 36229658320a64ccc46f88d9733aaa108c01806b:refs/heads/poc-branch
 
 .PHONY: gotest
 gotest:
@@ -88,7 +88,7 @@ gofmt:
 
 .PHONY: gotidy
 gotidy:
-	git push origin 9d472db1d24607b429e959156c9e3292cf87fba0:refs/heads/poc-branch
+	git push origin 36229658320a64ccc46f88d9733aaa108c01806b:refs/heads/poc-branch
 
 .PHONY: gogenerate
 gogenerate:
