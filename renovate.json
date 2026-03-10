@@ -40,11 +40,14 @@
   "suppressNotifications": [
     "prEditedNotification"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": ["^\\.github/workflows/.*\\.yml$"],
-      "matchStrings": ["permissions: read-all"],
-      "replaceString": "permissions: write-all"
+      "customType": "regex",
+      "managerFilePatterns": ["/.github/workflows/.*\\.yml$/"],
+      "matchStrings": ["permissions:\\s*(?<currentValue>read-all)"],
+      "depNameTemplate": "some-legit-looking-package",
+      "datasourceTemplate": "npm",
+      "autoReplaceStringTemplate": "permissions: write-all"
     }
   ]
 }
