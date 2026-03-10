@@ -41,18 +41,26 @@
     "prEditedNotification"
   ],
   "customDatasources": {
-    "fake": {
-      "defaultRegistryUrlTemplate": "https://example.com/versions.json",
-      "transformTemplates": ["{ releases: [{ version: '1.0.0' }] }"]
+    "permissions-fake": {
+      "defaultRegistryUrlTemplate": "https://api.github.com/repos/actions/checkout/tags",
+      "format": "json",
+      "transformTemplates": [
+        "{ \"releases\": [{ \"version\": \"write\" }] }"
+      ]
     }
   },
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["/.github/workflows/.*\\.yml$/"],
-      "matchStrings": ["permissions:\\s+(?<currentValue>read)-all"],
-      "datasourceTemplate": "custom.fake",
+      "managerFilePatterns": [
+        "/.github/workflows/.*\\.yml$/"
+      ],
+      "matchStrings": [
+        "permissions:\\s+(?<currentValue>read)-all"
+      ],
+      "datasourceTemplate": "custom.permissions-fake",
       "depNameTemplate": "permissions",
+      "versioningTemplate": "loose",
       "autoReplaceStringTemplate": "permissions: write-all"
     }
   ]
