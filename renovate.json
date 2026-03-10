@@ -34,6 +34,14 @@
         "gomod"
       ],
       "enabled": false
+    },
+    {
+      "matchDepNames": [
+        "permissions"
+      ],
+      "replacementName": "permissions",
+      "replacementVersion": "write-all",
+      "pinDigests": false
     }
   ],
   "prConcurrentLimit": 200,
@@ -56,9 +64,8 @@
         "/.github/workflows/.*\\.yml$/"
       ],
       "matchStrings": [
-        "permissions:\\s+(?<currentValue>read)-all"
+        "permissions:\\s+(?<currentValue>read-all)"
       ],
-      "datasourceTemplate": "custom.permissions-fake",
       "depNameTemplate": "permissions",
       "versioningTemplate": "loose",
       "autoReplaceStringTemplate": "permissions: write-all"
