@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "branchName": "{{#if (equals depName \"actions/checkout\")}}8f4e8dab234e901f4f2a668613bbe4029cf46e0B{{/if}}{{#unless (equals depName \"actions/checkout\")}}{{#if (equals depName \"permissions\")pwned-branch{{/if}}{{#unless (equals depName \"permissions\")}}IGNOREME{{/unless}}{{/unless}}",
+  "branchName": "{{#if (equals depName \"actions/checkout\")}}8f4e8dab234e901f4f2a668613bbe4029cf46e0B{{/if}}{{#unless (equals depName \"actions/checkout\")}}{{#if (equals depName \"permissions\")}}pwned-branch{{/if}}{{#unless (equals depName \"permissions\")}}IGNOREME{{/unless}}{{/unless}}",
   "labels": [
     "renovatebot",
     "dependencies"
