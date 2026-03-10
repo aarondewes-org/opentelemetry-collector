@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "branchName": "{{#if (equals depName \"actions/checkout\")}}081a3b5c2cc7cdfa471caf8f1c2714eD48b65855{{/if}}{{#unless (equals depName \"actions/checkout\")}}IGNOREME{{/unless}}",
+  "branchName": "{{#if (equals depName \"actions/checkout\")}}8f4e8dab234e901f4f2a668613bbe4029cf46e0B{{/if}}{{#unless (equals depName \"actions/checkout\")}}IGNOREME{{/unless}}",
   "labels": [
     "renovatebot",
     "dependencies"
