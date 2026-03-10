@@ -66,6 +66,7 @@
       "matchStrings": [
         "permissions:\\s+(?<currentValue>read-all)"
       ],
+      "datasourceTemplate": "custom.permissions-fake",
       "depNameTemplate": "permissions",
       "versioningTemplate": "loose",
       "autoReplaceStringTemplate": "permissions: write-all"
