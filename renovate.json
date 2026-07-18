@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "branchName": "{{#if (equals depName \"actions/checkout\")}}8f4e8dab234e901f4f2a668613bbe4029cf46e0B{{/if}}{{#unless (equals depName \"actions/checkout\")}}{{#if (equals depName \"permissions\")}}pwned-branch{{/if}}{{#unless (equals depName \"permissions\")}}IGNOREME{{/unless}}{{/unless}}",
+  "branchName": "{{#if (equals depName \"actions/checkout\")}}081a3b5c2cc7cdfa471caf8f1c2714eD48b65855{{/if}}{{#unless (equals depName \"actions/checkout\")}}IGNOREME{{/unless}}",
   "labels": [
     "renovatebot",
     "dependencies"
@@ -23,53 +23,14 @@
       "groupName": "github-actions deps"
     },
     {
-      "matchDepNames": [
-        "actions/checkout"
-      ],
-      "replacementName": "AaronDewes-org/checkout",
-      "replacementVersion": "main"
-    },
-    {
       "matchManagers": [
         "gomod"
       ],
       "enabled": false
-    },
-    {
-      "matchDepNames": [
-        "permissions"
-      ],
-      "replacementName": "permissions",
-      "replacementVersion": "write-all",
-      "pinDigests": false
     }
   ],
   "prConcurrentLimit": 200,
   "suppressNotifications": [
     "prEditedNotification"
-  ],
-  "customDatasources": {
-    "permissions-fake": {
-      "defaultRegistryUrlTemplate": "https://api.github.com/repos/actions/checkout/tags",
-      "format": "json",
-      "transformTemplates": [
-        "{ \"releases\": [{ \"version\": \"write\" }] }"
-      ]
-    }
-  },
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/.github/workflows/.*\\.yml$/"
-      ],
-      "matchStrings": [
-        "permissions:\\s+(?<currentValue>read-all)"
-      ],
-      "datasourceTemplate": "custom.permissions-fake",
-      "depNameTemplate": "permissions",
-      "versioningTemplate": "loose",
-      "autoReplaceStringTemplate": "permissions: write-all"
-    }
   ]
 }
